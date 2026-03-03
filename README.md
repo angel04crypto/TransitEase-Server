@@ -22,38 +22,41 @@ This project demonstrates authentication, protected APIs, booking persistence, a
 •Backend: Node.js, Express, MongoDB Atlas, Mongoose, Firebase Admin SDK
 •Authentication: Firebase Authentication
 
+## Project Structure
 
-Project Structure
-
+```bash
 TransitEase/
-├── client/                # Vite-based React frontend
+├── client/                        # Vite-based React frontend
 │   ├── src/
-│   │   ├── components/    # Reusable UI components
-│   │   ├── context/       # Authentication context
-│   │   ├── firebase/      # Firebase client configuration
-│   │   ├── pages/         # Application views (Home, Results, Details, MyTrips)
-│   │   └── services/      # Axios API instance with token interceptor
+│   │   ├── components/            # Reusable UI components
+│   │   ├── context/               # Authentication context
+│   │   ├── firebase/              # Firebase client configuration
+│   │   ├── pages/                 # Application views (Home, Results, Details, MyTrips)
+│   │   └── services/              # Axios API instance with token interceptor
 │
-├── server/                # Node.js/Express backend
-│   ├── config/            # Database & Firebase Admin configuration
-│   ├── controllers/       # Business logic handlers
-│   ├── middleware/        # Auth middleware (verifyToken, adminOnly)
-│   ├── models/            # Mongoose schemas (User, Transport, Booking)
-│   ├── routes/            # REST API endpoints
-│   ├── seed.js            # Route dataset generator (500+ dynamic routes)
-│   └── index.js           # Application entry point
+├── server/                        # Node.js / Express backend
+│   ├── config/                    # Database & Firebase Admin configuration
+│   ├── controllers/               # Business logic handlers
+│   ├── middleware/                # Auth middleware (verifyToken, adminOnly)
+│   ├── models/                    # Mongoose schemas (User, Transport, Booking)
+│   ├── routes/                    # REST API endpoints
+│   ├── seed.js                    # Route dataset generator (500+ dynamic routes)
+│   └── index.js                   # Application entry point
+```
 
+---
 
-#System Architecture Flow
-•User authenticates via Firebase.
-•Frontend fetches filtered routes from backend.
-•Backend queries MongoDB with dynamic filters.
-•User initiates booking.
-•Booking record is stored in MongoDB with lifecycle status.
-•User is redirected to official provider website for final payment.
-•User can view booking history in protected dashboard.
+## System Architecture Flow
 
-This architecture supports future integration of real-time APIs and payment gateways.
+1. User authenticates via Firebase.
+2. Frontend sends filtered route requests to backend.
+3. Backend queries MongoDB with dynamic filters.
+4. User initiates booking.
+5. Booking record is stored in MongoDB with lifecycle status.
+6. User is redirected to official provider website for payment.
+7. User can view booking history inside protected dashboard.
+
+This architecture supports future integration of real-time provider APIs and payment gateways.
 
 
 #Setup Instructions
