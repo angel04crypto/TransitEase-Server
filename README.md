@@ -61,24 +61,24 @@ This architecture supports future integration of real-time provider APIs and pay
 
 ##Setup Instructions
 
-Prerequisites
+##Prerequisites
 1. Node.js (v16+)
 2. MongoDB Atlas or Local MongoDB
 3. Firebase Project (Client + Admin SDK)
 
-Backend Setup
-cd server
-npm install
-node seed.js
-npm run dev
+##Backend Setup
+1. cd server
+2. npm install
+3. node seed.js
+4. npm run dev
 
-Server runs on:
+##Server runs on:
 http://localhost:5000
 
-Frontend Setup
-cd client
-npm install
-npm run dev
+##Frontend Setup
+1. cd client
+2. npm install
+3. npm run dev
 
 Frontend runs on:
 http://localhost:5174
