@@ -1,23 +1,23 @@
-#TransitEase — Travel Aggregation Platform
+##TransitEase — Travel Aggregation Platform
 
 TransitEase is a full-stack MERN travel aggregation platform that allows users to search, compare, and initiate bookings for multiple transport modes (Trains, Buses, Flights, and Cars) and securely redirects them to official provider websites for final payment.
 
 This project demonstrates authentication, protected APIs, booking persistence, and scalable backend architecture.
 
 
-#Features
-•Multi-Transport Search (Train, Bus, Flight, Car)
-•Advanced Filtering (price, rating, departure time, transport type)
-•Secure Provider Redirection Workflow
-•Firebase Authentication (Email/Password)
-•Protected Backend Routes (Firebase Admin Verification)
-•Booking Persistence in MongoDB
-•User-Specific Travel Dashboard
-•Large Seeded Dataset (500+ routes for demo realism)
-•Responsive UI with modern design
+##Features
+1. Multi-Transport Search (Train, Bus, Flight, Car)
+2. Advanced Filtering (price, rating, departure time, transport type)
+3. Secure Provider Redirection Workflow
+4. Firebase Authentication (Email/Password)
+5. Protected Backend Routes (Firebase Admin Verification)
+6. Booking Persistence in MongoDB
+7. User-Specific Travel Dashboard
+8. Large Seeded Dataset (500+ routes for demo realism)
+9. Responsive UI with modern design
 
 
-#Tech Stack
+##Tech Stack
 •Frontend: React.js, React Router, Tailwind CSS, Axios, Firebase, Framer Motion, Lucide React
 •Backend: Node.js, Express, MongoDB Atlas, Mongoose, Firebase Admin SDK
 •Authentication: Firebase Authentication
@@ -59,12 +59,12 @@ TransitEase/
 This architecture supports future integration of real-time provider APIs and payment gateways.
 
 
-#Setup Instructions
+##Setup Instructions
 
 Prerequisites
-•Node.js (v16+)
-•MongoDB Atlas or Local MongoDB
-•Firebase Project (Client + Admin SDK)
+1. Node.js (v16+)
+2. MongoDB Atlas or Local MongoDB
+3. Firebase Project (Client + Admin SDK)
 
 Backend Setup
 cd server
@@ -84,29 +84,29 @@ Frontend runs on:
 http://localhost:5174
 
 
-#Environment Variables
+##Environment Variables
 Server (.env)
-•MONGODB_URI
-•PORT
-•FIREBASE_SERVICE_ACCOUNT_KEY
+1. MONGODB_URI
+2. PORT
+3. FIREBASE_SERVICE_ACCOUNT_KEY
 
 Client (.env)
-•VITE_API_BASE_URL
-•Firebase configuration variables
+1. VITE_API_BASE_URL
+2. Firebase configuration variables
 
 
-#Deployment
-•Frontend: Vercel
-•Backend: Render / Railway
-•Database: MongoDB Atlas
+##Deployment
+1. Frontend: Vercel
+2. Backend: Render / Railway
+3. Database: MongoDB Atlas
 
 
-#Future Scope
-•Real-time provider API integration
-•Payment gateway integration
-•Booking confirmation via webhook
-•Dynamic pricing engine refinement
-•Admin analytics dashboard
+##Future Scope
+1. Real-time provider API integration
+2. Payment gateway integration
+3. Booking confirmation via webhook
+4. Dynamic pricing engine refinement
+5. Admin analytics dashboard
 
 
 Developed as a scalable full-stack travel aggregation system demonstrating secure authentication, RESTful API design, and protected booking workflows.
