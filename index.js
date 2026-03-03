@@ -26,8 +26,8 @@ app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/transports', require('./routes/transportRoutes'));
 app.use('/api/bookings', require('./routes/bookingRoutes'));
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
 });
