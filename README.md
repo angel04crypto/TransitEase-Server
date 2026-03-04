@@ -1,126 +1,174 @@
-##TransitEase — Travel Aggregation Platform
+# TransitEase — Travel Aggregation Platform
 
-## 🌍 Deployment
+TransitEase is a **full-stack MERN travel aggregation platform** that allows users to search, compare, and initiate bookings for multiple transport modes (Trains, Buses, Flights, and Cars) and securely redirects them to official provider websites for final payment.
 
-Frontend:
+The project demonstrates **authentication, protected APIs, booking persistence, and scalable backend architecture**.
+
+---
+
+# 🌍 Live Deployment
+
+Frontend
 https://transit-ease-client.vercel.app
 
-Backend API:
+Backend API
 https://transitease-server-production.up.railway.app
 
-TransitEase is a full-stack MERN travel aggregation platform that allows users to search, compare, and initiate bookings for multiple transport modes (Trains, Buses, Flights, and Cars) and securely redirects them to official provider websites for final payment.
+API Example
+https://transitease-server-production.up.railway.app/api/transports
 
-This project demonstrates authentication, protected APIs, booking persistence, and scalable backend architecture.
+---
 
+# ✨ Features
 
-##Features
-1. Multi-Transport Search (Train, Bus, Flight, Car)
-2. Advanced Filtering (price, rating, departure time, transport type)
-3. Secure Provider Redirection Workflow
-4. Firebase Authentication (Email/Password)
-5. Protected Backend Routes (Firebase Admin Verification)
-6. Booking Persistence in MongoDB
-7. User-Specific Travel Dashboard
-8. Large Seeded Dataset (500+ routes for demo realism)
-9. Responsive UI with modern design
+• Multi-Transport Search (Train, Bus, Flight, Car)
+• Advanced Filtering (Price, Rating, Departure Time, Transport Type)
+• Secure Provider Redirection Workflow
+• Firebase Authentication (Email / Password)
+• Protected Backend Routes (Firebase Admin Verification)
+• Booking Persistence in MongoDB
+• User-Specific Travel Dashboard
+• Large Seeded Dataset (500+ routes)
+• Responsive UI with modern design
 
+---
 
-##Tech Stack
-•Frontend: React.js, React Router, Tailwind CSS, Axios, Firebase, Framer Motion, Lucide React
-•Backend: Node.js, Express, MongoDB Atlas, Mongoose, Firebase Admin SDK
-•Authentication: Firebase Authentication
+# 🧰 Tech Stack
 
-## Project Structure
+### Frontend
 
-```bash
+React.js
+React Router
+Tailwind CSS
+Axios
+Firebase
+Framer Motion
+Lucide React
+
+### Backend
+
+Node.js
+Express.js
+MongoDB Atlas
+Mongoose
+Firebase Admin SDK
+
+### Authentication
+
+Firebase Authentication
+
+---
+
+# 📁 Project Structure
+
+```
 TransitEase/
 ├── client/                        # Vite-based React frontend
 │   ├── src/
 │   │   ├── components/            # Reusable UI components
 │   │   ├── context/               # Authentication context
 │   │   ├── firebase/              # Firebase client configuration
-│   │   ├── pages/                 # Application views (Home, Results, Details, MyTrips)
-│   │   └── services/              # Axios API instance with token interceptor
+│   │   ├── pages/                 # App pages (Home, Results, Details, MyTrips)
+│   │   └── services/              # Axios API instance
 │
 ├── server/                        # Node.js / Express backend
-│   ├── config/                    # Database & Firebase Admin configuration
-│   ├── controllers/               # Business logic handlers
-│   ├── middleware/                # Auth middleware (verifyToken, adminOnly)
-│   ├── models/                    # Mongoose schemas (User, Transport, Booking)
-│   ├── routes/                    # REST API endpoints
-│   ├── seed.js                    # Route dataset generator (500+ dynamic routes)
-│   └── index.js                   # Application entry point
+│   ├── config/                    # Database & Firebase Admin config
+│   ├── controllers/               # Business logic
+│   ├── middleware/                # Auth middleware
+│   ├── models/                    # MongoDB schemas
+│   ├── routes/                    # REST API routes
+│   ├── seed.js                    # Dataset generator
+│   └── index.js                   # Server entry point
 ```
 
 ---
 
-## System Architecture Flow
+# ⚙️ System Architecture Flow
 
-1. User authenticates via Firebase.
-2. Frontend sends filtered route requests to backend.
-3. Backend queries MongoDB with dynamic filters.
-4. User initiates booking.
+1. User authenticates using Firebase Authentication.
+2. Frontend sends filtered transport search requests to backend.
+3. Backend queries MongoDB using dynamic filters.
+4. User selects a transport option and initiates booking.
 5. Booking record is stored in MongoDB with lifecycle status.
-6. User is redirected to official provider website for payment.
-7. User can view booking history inside protected dashboard.
+6. User is redirected to the official provider website for payment.
+7. Booking history can be viewed inside the protected dashboard.
 
-This architecture supports future integration of real-time provider APIs and payment gateways.
+This architecture allows easy future integration with **real-time transport APIs and payment gateways**.
 
+---
 
-##Setup Instructions
+# 🖥️ Local Development Setup
 
-##Prerequisites
-1. Node.js (v16+)
-2. MongoDB Atlas or Local MongoDB
-3. Firebase Project (Client + Admin SDK)
+## Prerequisites
 
-##Backend Setup
-1. cd server
-2. npm install
-3. node seed.js
-4. npm run dev
+Node.js (v16+)
+MongoDB Atlas or Local MongoDB
+Firebase Project (Client + Admin SDK)
 
-##Server runs on:
+---
+
+## Backend Setup
+
+```
+cd server
+npm install
+node seed.js
+npm run dev
+```
+
+Server runs on:
+
 http://localhost:5000
 
-##Frontend Setup
-1. cd client
-2. npm install
-3. npm run dev
+---
+
+## Frontend Setup
+
+Open a new terminal:
+
+```
+cd client
+npm install
+npm run dev
+```
 
 Frontend runs on:
+
 http://localhost:5174
 
+---
 
-##Environment Variables
-Server (.env)
-1. MONGODB_URI
-2. PORT
-3. FIREBASE_SERVICE_ACCOUNT_KEY
+# 🔐 Environment Variables
 
-Client (.env)
-1. VITE_API_BASE_URL
-2. Firebase configuration variables
+### Server (.env)
 
+MONGODB_URI
+PORT
+FIREBASE_SERVICE_ACCOUNT_KEY
 
-##Deployment
-1. Frontend: Vercel
-2. Backend: Render / Railway
-3. Database: MongoDB Atlas
+### Client (.env)
 
-## 🔗 API Example
+VITE_API_BASE_URL
+Firebase configuration variables
 
-Get available transport routes:
+---
 
-https://transitease-server-production.up.railway.app/api/transports
+# 🚀 Deployment
 
+Frontend — Vercel
+Backend — Railway
+Database — MongoDB Atlas
 
-##Future Scope
-1. Real-time provider API integration
-2. Payment gateway integration
-3. Booking confirmation via webhook
-4. Dynamic pricing engine refinement
-5. Admin analytics dashboard
+---
 
+# 🔮 Future Scope
 
-Developed as a scalable full-stack travel aggregation system demonstrating secure authentication, RESTful API design, and protected booking workflows.
+• Real-time provider API integration
+• Payment gateway integration
+• Booking confirmation via webhook
+• Dynamic pricing engine
+• Admin analytics dashboard
+
+---
+
+Developed as a **scalable full-stack travel aggregation system** demonstrating secure authentication, RESTful API design, and protected booking workflows.
