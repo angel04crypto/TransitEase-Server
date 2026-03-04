@@ -1,5 +1,13 @@
 ##TransitEase — Travel Aggregation Platform
 
+## 🌍 Deployment
+
+Frontend:
+https://transit-ease-client.vercel.app
+
+Backend API:
+https://transitease-server-production.up.railway.app
+
 TransitEase is a full-stack MERN travel aggregation platform that allows users to search, compare, and initiate bookings for multiple transport modes (Trains, Buses, Flights, and Cars) and securely redirects them to official provider websites for final payment.
 
 This project demonstrates authentication, protected APIs, booking persistence, and scalable backend architecture.
@@ -99,6 +107,12 @@ Client (.env)
 1. Frontend: Vercel
 2. Backend: Render / Railway
 3. Database: MongoDB Atlas
+
+## 🔗 API Example
+
+Get available transport routes:
+
+https://transitease-server-production.up.railway.app/api/transports
 
 
 ##Future Scope
